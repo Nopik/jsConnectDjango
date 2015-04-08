@@ -1,6 +1,6 @@
 # Django imports
 from django.http import HttpResponse
-from django.utils import simplejson as json
+import json
 
 
 def js_connect_response(data, callback=None):
@@ -15,4 +15,4 @@ def js_connect_response(data, callback=None):
         response_data = "%s(%s)" % (callback, json_string)
         mimetype = "application/javascript"
 
-    return HttpResponse(response_data, mimetype=mimetype)
+    return HttpResponse(response_data, content_type=mimetype)

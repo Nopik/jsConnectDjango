@@ -6,6 +6,8 @@ Django implementation of jsConnect for VanillaForums.
 It implements the std interface for a jsConnect addon
 you may need to provide your own backend for returning user photo URLs.
 
+Updated for Python 3 and Django 1.7.x
+
 Basic usage
 -----------
 

@@ -6,7 +6,7 @@ import hmac
 # A simple decorator
 def hash_digestor(func):
     def f(string):
-        return func(string).hexdigest()
+        return func(string.encode('utf-8')).hexdigest()
     return f
 
 

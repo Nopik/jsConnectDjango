@@ -3,7 +3,7 @@ from time import time
 from base64 import b64encode
 
 # Django imports
-from django.utils import simplejson as json
+import json
 
 # Helper imports
 from .hash import js_connect_embedded_hash

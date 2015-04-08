@@ -1,6 +1,6 @@
 # Python imports
 from collections import OrderedDict
-from urllib import urlencode
+from urllib.parse import urlencode
 
 # Local imports
 from .hash import js_connect_hash
@@ -9,7 +9,7 @@ from .hash import js_connect_hash
 def js_connect_sign(data, client_id, secret, hash_type, return_data=False):
     old_data = data
     keys = data.keys()
-    keys.sort()
+    keys = sorted(keys)
     data = OrderedDict.fromkeys(keys)
     data.update(old_data)
 
